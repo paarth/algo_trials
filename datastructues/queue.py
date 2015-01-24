@@ -8,7 +8,7 @@ class Queue:
 	def enqueue(self,item):
 		self.items.insert(0,items)
 
-	def dequeue(self):
+	def deque(self):
 		return self.items.pop()
 
 	def size(self):
