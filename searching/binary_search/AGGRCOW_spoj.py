@@ -1,9 +1,9 @@
 def possible(curremt_distance,stall_location,c):
 	n = len(stall_location)
 	cnt = 1
-
 	b = 0
 	i = 1
+	
 	while i < n and cnt < c:
 		if stall_location[i]-stall_location[b] >= curremt_distance:
 			cnt += 1
