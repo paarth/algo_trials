@@ -33,6 +33,47 @@ class BinaryTree(object):
 	def setRootVal(self, new_object):
 		self.key = new_object
 
+	def pre_order_traversal(self):
+		print(self.key)
+		if self.left_child:
+			self.left_child.pre_order_traversal()
+		if self.right_child:
+			self.right_child.pre_order_traversal()
+
+	def post_order_traversal(self):
+		if self.left_child:
+			self.left_child.post_order_traversal()
+		if self.right_child:
+			self.right_child.post_order_traversal()
+		print(self.key)
+
+	def in_order_traversal(self):
+		if self.left_child:
+			self.left_child.in_order_traversal()
+		print(self.key)
+		if self.right_child:
+			self.right_child.in_order_traversal()
+
+
+# Methods of external traversals of tree. 
+# Required as in most cases we would not like to just traverse the tree.
+def pre_order_traversal(tree):
+	if tree != None:
+		print(tree.getRootVal())
+		pre_order_traversal(tree.getLeftChild())
+		pre_order_traversal(tree.getRightChild())
+
+def post_order_traversal(tree):
+	if tree != None:
+		post_order_traversal(tree.getLeftChild())
+		post_order_traversal(tree.getRightChild())
+		print(tree.getRootVal())
+
+def in_order_traversal(tree):
+	if tree != None:
+		in_order_traversal(tree.getLeftChild())
+		print(tree.getRootVal)
+		in_order_traversal(tree.getRightChild())
 
 ## Test to simluate and check the implementation 
 # r = BinaryTree('a')

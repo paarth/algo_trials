@@ -25,6 +25,24 @@ def getLeftChild(root):
 def getRightChild(root):
 	return root[2]
 
+def pre_order_traversal(root):
+	if root:
+		print(getRootVal(root))
+		pre_order_traversal(getLeftChild(root))
+		pre_order_traversal(getRightChild(root))
+
+def post_order_traversal(root):
+	if root:
+		post_order_traversal(getLeftChild(root))
+		post_order_traversal(getRightChild(root))
+		print(getRootVal(root))
+
+def in_order_traversal(root):
+	if root:
+		in_order_traversal(getLeftChild(root))
+		print(getRootVal(root))
+		in_order_traversal(getRightChild(root))
+
 ## Test to simluate and check the implementation 
 # r = BinaryTree(3)
 # insertLeft(r,4)
