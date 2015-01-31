@@ -3,21 +3,13 @@ def BinaryTree(r):
 
 def insertLeft(root,new_branch):
 	t = root.pop(1)
-
-	if len(t) > 1:
-		root.insert(1,[new_branch,t,[]])
-	else:
-		root.insert(1,[new_branch, [], []])
+	root.insert(1,[new_branch,t,[]])
 
 	return root
 
 def insertRight(root,new_branch):
 	t = root.pop(2)
-
-	if len(t) > 1:
-		root.insert(2, [new_branch, [], t])
-	else:
-		root.insert(2, [new_branch, [], []])
+	root.insert(2, [new_branch, [], t])		
 
 	return root
 
