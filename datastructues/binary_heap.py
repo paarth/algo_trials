@@ -13,7 +13,6 @@ class BinHeap(object):
 		while index > 0:
 			if self.heapList[index] < self.heapList[(index-1) // 2]:
 				self.swap(index,(index-1)//2)
-
 			index = index // 2
 
 	def insert(self,item):
